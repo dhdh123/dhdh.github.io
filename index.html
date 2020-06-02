@@ -50,7 +50,242 @@
               <a direction="center" class="warn-inner">  公告：本站包含明显成人内容，请备好纸巾，急速开车！</a>
              </div>
            </div>
-		   
+		   <style>
+	* {
+		font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+	}
+	body{
+		margin:0;
+		padding: 0;
+		font-size: 16px;
+		background-color:#f2f2f2;
+		scroll-x: no;
+		padding-top:51px!important;
+		height: 100%;
+	}
+	.wrap{
+		width: 70%;
+		margin-left: 15%;
+	}
+	@media screen and (max-width:320px ) {
+	    html{font-size: 12px!important;}
+	}
+	@media screen and (min-width:321px) and (max-width:750px ) {
+	    html{font-size: 14px!important;}
+	}
+	@media screen and (min-width:751px ) {
+	    html{font-size: 16px!important;}
+	}
+	@media only screen and (max-width:769px){
+		body{
+			margin:0;
+			padding: 0;
+			background-color:#f2f2f2;
+		}
+		.wrap{
+			width: 100%;
+			margin-left: 0%;
+		}
+		.search input{
+			width: 65%!important;
+		}	
+		.categary .title{
+			width: 97%!important;
+			margin-left: 3%!important;
+		}
+	}
+	header{
+		position: fixed;
+		top:0;
+		left:0;
+		width: 100%;
+		background-color: #02A7E3;
+		text-align:center;
+       height: 51px;
+		padding: 12px 0;
+		color: #fff;
+		z-index: 10;
+	}
+	header h1{
+		font-size: 1.5rem;
+		width: 60%;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		display: inline-block;
+	}
+	.top-span{
+		box-shadow: 2px 2px 3px #0298cf;
+		border-top: 1px solid #fff;
+		border-color: rgba(255,255,255,0.3);
+		background-color: #02A7E3;
+		border-radius: 20px;
+		font-size: 0.9rem;
+		padding: 4px 8px;
+		cursor: pointer;
+		margin-top: 2px; 
+	}
+	.vip-span{
+		float: left;
+		margin-left: 10px;
+	}
+	.fresh-span{
+		float: right;
+		margin-right: 10px;
+	}
+	.top-span .layui-icon{
+		font-size: 0.7rem;
+	}
+	
+	.bottom{
+		margin: 20px 0 10px 0;
+		width: 100%;
+	}
+	.red{
+		color: red;
+	}
+	.bottom p{
+		width: 100%;
+		text-align: center;
+		font-size: 0.8rem;
+		line-height: 1.2rem;
+		color: gray;
+	}
+
+			.layui-tab{
+				margin-top:0!important;
+				margin-bottom: 0!important;
+			}
+			.layui-tab-title{
+				height: 51px!important;
+			}
+			.layui-tab-title li{
+				line-height: 50px!important;
+				padding: 0 !important;
+				width: 16.6%;
+				min-width: 50px!important;
+				vertical-align: bottom!important;
+			}
+			.layui-unselect {
+				display: none;
+			}
+			.layui-tab-title li.layui-this:after{
+				border-bottom: 0px solid orange!important;
+			}
+			.layui-tab-title li.layui-this{
+				border-bottom: 2px solid orange!important;
+			}
+			.layui-tab-title li a{
+				font-size: 1.1rem;
+			}
+			.layui-tab-title li.layui-this a{
+				color:orange!important;
+			}
+			.layui-tab-content{
+				padding: 8px 0 0 0!important;
+				height: auto !important;
+			}
+			
+			.search{
+				background-color: #ccc;
+				padding:18px 0;
+				width: 100%;
+				text-align: center;
+			}
+			.search input{
+				vertical-align: middle;   
+				display:inline-block;
+				border: 3px solid orange;
+				padding-left:20px;
+				width: 40%;
+				height: 50px;
+				border-radius: 20px 0 0 20px; 
+			}
+			.search button{
+				vertical-align: middle;   
+				display:inline-block;
+				background: #808080;
+				color: #efefef;
+				border: 0;
+				height: 50px;
+				margin-left: -3px;
+				padding: 0 35px;
+				border-radius: 0 20px 20px 0; 
+				font-size: 1.1rem;
+			}
+			
+			.categary{
+				
+			}
+			.categary .title{
+				width: 100%!important; 
+				text-align: center; 
+				font-size: 1.1rem; 
+				color: #efefef; 
+				padding: 15px 0;
+				background-color: #444;
+				margin-left:0!important;
+				font-weight: bold;
+			}
+			.categary .items{
+				width: 100%;
+				background-color: #ccc;
+			}
+			.categary .item{
+				float: left;
+				display: inline-block;
+				text-align: center;
+				width: 25%;
+				padding: 15px 0;
+				background-color: #fff;
+				cursor: pointer !important;
+			}
+			.categary .item:hover{
+				background-color: #efffff;
+			}
+			.categary .item .item-title{
+				color: #369;
+				font-size: 1.1rem;
+			}	
+			.categary .item .item-info{
+				color: #999;
+				font-size: 0.8rem;
+				margin-left: 5px;
+			}
+			.categary .noresource{
+				font-size: 1.2rem;
+				width: 100%;
+				text-align: center;
+				color: red;
+				font-weight: bold;
+				margin-top: 30px;
+				margin-bottom: 35px;
+			}
+         
+                  /*搜索框1*/
+        .bar1 {background: #A3D0C3;}
+        .bar1 input {
+            border: 2px solid #7BA7AB;
+            border-radius: 5px;
+            background: #F9F0DA;
+            color: #9E9C9C;
+        }
+        .bar1 button {
+            top: 0;
+            right: 0;
+            background: #7BA7AB;
+            border-radius: 0 5px 5px 0;
+        }
+        .bar1 button:before {
+            content: "搜索";
+            font-family: FontAwesome;
+            font-size: 16px;
+            color: #F9F0DA;
+        }
+
+            
+
+		</style>
 		   
 		   
 		     <!--热门标签开始-->
